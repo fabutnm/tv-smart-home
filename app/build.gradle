@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'io.github.fabutnm.homepanel'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'io.github.fabutnm.homepanel'
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    // Release key from the builder's own ~/.gradle/gradle.properties (RELEASE_STORE_FILE, RELEASE_STORE_PASSWORD,
+    // RELEASE_KEY_ALIAS, RELEASE_KEY_PASSWORD), never from the repo. Without them the build uses the debug key.
+    def releaseStore = providers.gradleProperty('RELEASE_STORE_FILE').getOrNull()
+    signingConfigs {
+        if (releaseStore != null) {
+            release {
+                storeFile file(releaseStore)
+                storePassword providers.gradleProperty('RELEASE_STORE_PASSWORD').get()
+                keyAlias providers.gradleProperty('RELEASE_KEY_ALIAS').get()
+                keyPassword providers.gradleProperty('RELEASE_KEY_PASSWORD').get()
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+            signingConfig releaseStore != null ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // Test only (never in the APK): org.json is part of Android but not of the JVM the unit tests run on.
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20240303'
+}

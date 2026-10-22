@@ -1,0 +1,52 @@
+{
+  "url": "http://192.168.1.10:8123",
+  "token": "ВСТАВЬТЕ_ТОКЕН_ДОЛГОВРЕМЕННОГО_ДОСТУПА",
+  "title": "Дом",
+  "columns": 5,
+  "background": "sunset",
+  "sections": [
+    {
+      "title": "Сценарии",
+      "items": [
+        { "entity": "scene.movie", "name": "Кино" },
+        { "entity": "scene.night", "name": "Ночь" }
+      ]
+    },
+    {
+      "title": "Свет",
+      "items": [
+        { "entity": "light.living_room", "name": "Гостиная" },
+        { "entity": "light.kitchen", "name": "Кухня" },
+        { "entity": "switch.hall_light", "name": "Коридор", "icon": "bulb" }
+      ]
+    },
+    {
+      "title": "Климат и шторы",
+      "items": [
+        { "entity": "climate.living_room_ac", "name": "Кондиционер" },
+        { "entity": "cover.living_room_curtains", "name": "Шторы" },
+        { "entity": "sensor.bedroom_temperature", "name": "Спальня", "detail": "sensor.bedroom_humidity" },
+        { "entity": "weather.forecast_home", "name": "Погода" }
+      ]
+    },
+    {
+      "title": "Входная дверь",
+      "items": [
+        { "entity": "lock.front_door", "name": "Замок", "detail": "sensor.front_door_battery" },
+        { "entity": "camera.doorbell", "name": "Камера звонка" }
+      ]
+    },
+    {
+      "title": "Техника",
+      "items": [
+        { "entity": "vacuum.robot", "name": "Пылесос", "detail": "sensor.robot_battery" },
+        { "entity": "sensor.washer_status", "name": "Стиральная", "icon": "washer",
+          "detail": "sensor.washer_time_left", "detail_unless": [ "Off" ],
+          "states": { "Off": "Выключена", "Washing": "Стирка", "Done": "Готово" } },
+        { "name": "Протечки", "ok": "Сухо", "alarm": "Протечка",
+          "any_of": [ "binary_sensor.kitchen_leak", "binary_sensor.bathroom_leak" ],
+          "labels": { "binary_sensor.kitchen_leak": "кухня", "binary_sensor.bathroom_leak": "ванная" } }
+      ]
+    }
+  ]
+}

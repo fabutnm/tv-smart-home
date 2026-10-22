@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Дом</string>
+    <string name="connecting">Подключение…</string>
+    <string name="online">● На связи</string>
+    <string name="offline">Нет связи с Home Assistant</string>
+    <string name="auth_failed">Home Assistant не принял токен</string>
+    <string name="call_failed">Не получилось: %1$s</string>
+    <string name="save_failed">Не удалось сохранить: %1$s</string>
+    <string name="config_missing">Нет настроек. Запустите на компьютере install.ps1 с вашим config.json.</string>
+    <string name="config_broken">Ошибка в config.json: %1$s</string>
+    <string name="started">%1$s: запущено</string>
+    <string name="unlock_question">Открыть: %1$s?</string>
+    <string name="unlock">Открыть</string>
+    <string name="yes">Да</string>
+    <string name="cancel">Отмена</string>
+    <string name="done">Готово</string>
+    <string name="back">Назад</string>
+    <string name="add">Добавить</string>
+    <string name="camera_failed">Нет картинки с камеры</string>
+
+    <string name="lights_on">Свет: включено %1$d</string>
+    <string name="lights_off">Свет выключен</string>
+    <string name="door_open">Дверь открыта</string>
+    <string name="door_closed">Дверь закрыта</string>
+    <string name="not_in_ha">Нет в Home Assistant</string>
+    <string name="empty_hint">Плиток нет. Нажмите «Изменить» вверху, чтобы добавить устройства.</string>
+
+    <string name="edit">Изменить</string>
+    <string name="editing_title">Правка</string>
+    <string name="editing_hint">OK на плитке — меню · «⋯» у раздела — раздел · «+» — добавить</string>
+    <string name="add_devices">Добавить устройства</string>
+    <string name="new_section">Новый раздел</string>
+    <string name="new_section_dots">Новый раздел…</string>
+    <string name="move">Переместить</string>
+    <string name="move_hint">Стрелки — переместить, OK — поставить</string>
+    <string name="rename">Переименовать</string>
+    <string name="icon">Значок</string>
+    <string name="to_section">В другой раздел</string>
+    <string name="hide">Скрыть</string>
+    <string name="show">Показать</string>
+    <string name="hidden">Скрыто</string>
+    <string name="hidden_hint">Скрыто. Вернуть: «Изменить» → плитка → «Показать»</string>
+    <string name="remove">Удалить</string>
+    <string name="remove_question">Убрать «%1$s» с панели? В Home Assistant ничего не изменится.</string>
+    <string name="section_up">Выше</string>
+    <string name="section_down">Ниже</string>
+    <string name="section_delete">Удалить раздел</string>
+    <string name="section_delete_question">Удалить раздел «%1$s» и его плитки (%2$d)?</string>
+    <string name="loading_devices">Загружаю устройства из Home Assistant…</string>
+    <string name="nothing_to_add">Все устройства уже на панели</string>
+    <string name="pick_room">%1$s: из какой комнаты?</string>
+
+    <string name="settings">Настройки панели</string>
+    <string name="background">Фон</string>
+    <string name="background_row">Фон: %1$s</string>
+    <string name="columns">Плиток в ряду</string>
+    <string name="columns_row">Плиток в ряду: %1$d</string>
+    <string name="edit_panel">Изменить панель</string>
+    <string name="reset_layout">Сбросить раскладку</string>
+    <string name="reset_question">Вернуть раскладку из config.json? Изменения, сделанные на ТВ, пропадут.</string>
+    <string name="reset">Сбросить</string>
+</resources>

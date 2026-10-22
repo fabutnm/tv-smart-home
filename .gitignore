@@ -1,0 +1,9 @@
+.gradle/
+build/
+app/build/
+local.properties
+# Your real config (server address and token) and signing keys never go into the repo.
+config.json
+*.jks
+*.keystore
+*.apk

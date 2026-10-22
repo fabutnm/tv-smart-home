@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The TV banner: a warm gradient house on a light card, no words. Drawn for this add-on. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="320dp" android:height="180dp"
+    android:viewportWidth="320" android:viewportHeight="180">
+    <path android:pathData="M0,0h320v180h-320z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="0" android:startY="0" android:endX="0" android:endY="180"
+                android:startColor="#FFFFFFFF" android:endColor="#FFECECF1" />
+        </aapt:attr>
+    </path>
+    <!-- house: roof and body in one shape, a door cut out -->
+    <path android:fillType="evenOdd"
+        android:pathData="M160,36 L218,84 Q222,88 217,90 L208,90 L208,138 Q208,144 202,144 L118,144 Q112,144 112,138 L112,90 L103,90 Q98,88 102,84 Z M150,144 L150,116 Q150,110 156,110 L164,110 Q170,110 170,116 L170,144 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="160" android:startY="36" android:endX="160" android:endY="144"
+                android:startColor="#FFFFB340" android:endColor="#FFFF7A1A" />
+        </aapt:attr>
+    </path>
+</vector>
